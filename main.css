@@ -20,7 +20,7 @@ h1 {
     text-align: left;
     font-size: 4.5em;
     color: #efefef;
-    line-height: 0.5em;
+    line-height: 1em;
 }
 
 h2 {
@@ -67,6 +67,7 @@ ul li a {
     text-align: left;
     line-height: 3em;
     text-decoration: none;
+    text-wrap: nowrap;
 }
 
 ul li a:hover {

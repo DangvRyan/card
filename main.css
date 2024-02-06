@@ -27,18 +27,20 @@ h2 {
     font-family: lato, sans-serif;
     text-align: left;
     color: #efefef;
-    line-height: 1em;
+    line-height: 1.5em;
+    margin-top: -2em;
     margin-bottom: 1.5em;
 }
 
 .cover {
     display: block;
     position: absolute;
-    margin-left: 360px;
+    margin-left: 390px;
     margin-top: -225px;
     animation: slideinfrombot 0.5s ease, slideoutfromright 0.4s ease;
     animation-delay: 0s, 0.8s;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 .logo {
@@ -68,6 +70,7 @@ ul li a {
     line-height: 3em;
     text-decoration: none;
     text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 ul li a:hover {
@@ -97,7 +100,7 @@ ul li img {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr 1fr;
     margin: 10em auto;
 }
 
@@ -162,4 +165,28 @@ ul li img {
 	100% {
 		opacity: 1;
 	}
+}
+
+@media only screen and (max-width: 768px) {
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    animation: none;
+    opacity: 1;
+}
+
+.cover {
+    display: none;
+}
+
+.card {
+    width: 65vw;
+}
+
 }

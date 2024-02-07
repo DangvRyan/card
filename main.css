@@ -6,8 +6,7 @@
 body {
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: #78A6B2;
-    background-repeat: no-repeat;
+    background: url(assets/bg/bg.png) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -126,6 +125,21 @@ ul li img {
     opacity: 0;
 }
 
+.resize-animation-stopper {
+    .logo {
+        animation: none;
+        opacity: 1;
+        transform: translateX(-70%);
+    }
+    .card{
+        animation: none;
+        opacity: 1;
+    }
+    .cover{
+        display: none;
+    }
+}
+
 @keyframes slideinfrombot {
 	0% {
 		transform: translateY(50%);
@@ -142,7 +156,7 @@ ul li img {
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(-20%);
+		transform: translateX(-30%);
 		opacity: 0;
 	}
 }
@@ -167,6 +181,26 @@ ul li img {
 	}
 }
 
+@media (prefers-reduced-motion){
+    .cover{
+        display: none;
+    }
+    .logo{
+        animation: none;
+        opacity: 1;
+        transform: translateX(-70%);
+    }
+    .card{
+        animation: none;
+        opacity: 1;
+    }
+    @media only screen and (max-width: 768px) {
+        .logo{
+            transform: translateX(0%);
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
 
 body {
@@ -183,6 +217,8 @@ body {
 
 .logo {
     animation: none;
+    align-self: center;
+    justify-self: center;
     opacity: 1;
 }
 
@@ -192,6 +228,13 @@ body {
 
 .card {
     width: 65vw;
+    animation: none;
+    opacity: 1;
 }
 
+.resize-animation-stopper {
+    .logo {
+        transform: translateX(-0%);
+    }
+}
 }

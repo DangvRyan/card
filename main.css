@@ -156,7 +156,7 @@ ul li img {
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(-30%);
+		transform: translateX(-25%);
 		opacity: 0;
 	}
 }

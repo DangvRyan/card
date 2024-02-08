@@ -35,7 +35,7 @@ h2 {
     display: block;
     position: absolute;
     margin-left: 580px;
-    margin-top: -220px;
+    margin-top: -210px;
     animation: slideinfrombot 0.5s ease, slideoutfromright 0.4s ease;
     animation-delay: 0s, 0.8s;
     animation-fill-mode: forwards;
@@ -181,22 +181,48 @@ ul li img {
 	}
 }
 
-@media (prefers-reduced-motion){
+@media (prefers-reduced-motion) {
     .cover{
-        display: none;
+        animation: none;
+        transform: translateX(-45%);
+        display: block;
+        position: absolute;
+        z-index: -1;
     }
     .logo{
         animation: none;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-70%);
     }
     .card{
         animation: none;
         opacity: 1;
     }
+    .resize-animation-stopper {
+        .logo {
+            opacity: 0;
+            transform: translateX(-70%);
+        }
+        .cover{
+            display: block;
+            opacity: 1;
+        }
+    }
     @media only screen and (max-width: 768px) {
         .logo{
             transform: translateX(0%);
+            opacity: 1;
+        }
+        .cover {
+            display: none;
+        }
+        .resize-animation-stopper {
+            .logo {
+                opacity: 1;
+            }
+            .cover{
+                opacity: 0;
+            }
         }
     }
 }

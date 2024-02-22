@@ -1,3 +1,5 @@
 ## Ryan Dang Business Card
 
+This is my first project for the University of Massachusetts Dartmouth's Web Typography class. I already had a basic understanding of HTML and CSS before the project, but I reviewed with Scrimba lessons to keep my skills fresh. The project involves making a business card layout to practice basic coding and adjusting typographic elements in code.
+
 I started with placing my portrait offscreen and putting my logo in a CSS grid. I used @keyframe animations when the user loads the website to animate them both. The business card itself is responsive from using grid and flexbox within a media query. I ran into a problem with the animations playing on a window resize, so I took some javascript off of Google and modified it to pause the animations. I added a reduced motion media query, but because of the window resizing script I may have overcomplicated the CSS as I needed to call on the resize-animation-stopper class a lot.
